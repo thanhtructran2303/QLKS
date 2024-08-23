@@ -1,0 +1,73 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+<h1 class="text-center text-info mt-1">CHI TIẾT PHÒNG</h1>
+
+<div class="row">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="section-title">
+
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+				<img class="card-img-top"  alt="Card image" src="{{ url_for('static', filename='images/img_4') }}"/>
+			</div>
+			<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+				<div class="quickview-content">
+					<h2>{{ product.tenPhong }}</h2>
+					<h4>{{ product.giaPhong }} VNĐ</h4>
+					<h3>Tiện ích phòng</h3>
+					<div class="quickview-peragraph">
+						<p>
+						<div class="content has-table">
+							<table>
+								<tbody>
+									<tr>
+										<td>Điều hòa âm tường:</td>
+										<td>1 cái</td>
+									</tr>
+									<tr>
+										<td>Tivi:</td>
+										<td>1 cái</td>
+									</tr>
+									<tr>
+										<td>Tủ lạnh:</td>
+										<td>1 cái</td>
+									</tr>
+									<tr>
+										<td>Đồ dùng bếp: </td>
+										<td>Ấm đun siêu tốc, máy pha cà phê, ly, ấm pha trà, tô, đũa, muỗng</td>
+									</tr>
+									<tr>
+										<td>Thực phẩm - Đồ uống: </td>
+										<td>Mỳ ăn liền, trà túi lọc, cà phê nén</td>
+									</tr>
+									<tr>
+										<td>Bàn trà</td>
+										<td>1 bộ (1 bàn - 2 ghế)</td>
+									</tr>
+									<tr>
+										<td>Tủ quần áo</td>
+										<td>1 cái</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						</p>
+					</div>
+				</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment-with-locales.min.js"></script>
+	<script>
+		window.onload = function () {
+		let dates = document.getElementsByClassName("date");
+		for (let d of dates)
+			d.innerText = moment(d.innerText).locale("vi").fromNow()
+					}
+	</script>
+{% endblock %}
